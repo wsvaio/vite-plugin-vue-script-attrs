@@ -31,7 +31,7 @@ import scriptAttrs from "vite-plugin-vue-script-attrs";
 ```
 
 4. OUT
-```
+```vue
 <!-- vite-plugin-vue-script-attrs generate start -->     
 <script>export default { name: "home", a: "a", b: "b" }</script>
 <!-- vite-plugin-vue-script-attrs generate end -->    
