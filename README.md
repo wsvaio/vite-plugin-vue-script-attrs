@@ -14,13 +14,13 @@ import scriptAttrs from "vite-plugin-vue-script-attrs";
 ...
   plugins: [
     vue(),
-    scriptAttrs({ attrNames: ["name", "a", "b"] }) // default = ["name"]
+    scriptAttrs({ attrNames: ["name", "inheritAttrs", "a"] }) // attrNames default = ["name"]
   ],
 ...
 ```
 3. IN
 ```vue
-<script setup lang="ts" name="home" a="a" b="b" c="c">
+<script setup lang="ts" name="home" inheritAttrs="true" a="a" b="b" c="c">
 
 </script>
 
@@ -31,12 +31,11 @@ import scriptAttrs from "vite-plugin-vue-script-attrs";
 ```
 
 4. OUT
-```vue
-<!-- vite-plugin-vue-script-attrs generate start -->     
-<script>export default { name: "home", a: "a", b: "b" }</script>
-<!-- vite-plugin-vue-script-attrs generate end -->    
-<script setup lang="ts" b="b">
+```vue   
+<script lang="ts">export default { name: "home", inheritAttrs: true, a: "a" }</script><!-- generate by vite-plugin-vue-script-attrs -->
+<script setup lang="ts" b="b" c="c">import { ref } from 'vue';
 
+const num = ref(0);
 </script>
 
 <template>

@@ -14,10 +14,7 @@
     "plugin",
     "vue",
     "script",
-    "attrs",
-    "setup",
-    "name",
-    "inheritAttrs"
+    "attrs"
   ],
   "exports": {
     ".": {
@@ -50,6 +47,6 @@
     "rollup-plugin-dts": "^5.0.0",
     "tslib": "^2.4.1",
     "typescript": "^4.8.4",
-    "vite": "^3.2.4"
+    "vite": "^3.2.5"
   }
 }
