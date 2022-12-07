@@ -1,4 +1,4 @@
-<script setup lang="ts" name="home" inheritAttrs="true" a="a" b="b" c="c">
+<script setup lang="ts" name="home" inheritAttrs="true" a="a" b="b" c="c" tag="div" :class="['admin', layout, collapse && 'collapse']" :style="{ '--aside-width': asideWidth }">
 import { ref } from 'vue';
 import iii from "./index.vue";
 
