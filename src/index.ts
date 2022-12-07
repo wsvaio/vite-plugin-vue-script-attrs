@@ -51,7 +51,6 @@ export default ({ attrNames = ["name"], autoName = false } = {}): PluginOption =
       const content = objectToString(attr, attrNames);
       const lang = attr.lang ? ` lang=${attr.lang}` : ""
 
-      console.log(generate(content, code, lang));
       if (content) return generate(content, code, lang);
     }
   }
