@@ -38,9 +38,8 @@ import scriptAttrs from "vite-plugin-vue-script-attrs";
 4. OUT
 ```vue   
 <script lang="ts">export default { name: "home", inheritAttrs: true, a: "a" }</script><!-- generate by vite-plugin-vue-script-attrs -->
-<script setup lang="ts" b="b" c="c">import { ref } from 'vue';
+<script setup lang="ts" b="b" c="c">
 
-const num = ref(0);
 </script>
 
 <template>

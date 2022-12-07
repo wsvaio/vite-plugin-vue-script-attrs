@@ -1,6 +1,6 @@
 <script setup lang="ts" name="home" inheritAttrs="true" a="a" b="b" c="c">
 import { ref } from 'vue';
-import wdf from "./index.vue";
+import iii from "./index.vue";
 
 const num = ref(0);
 </script>
@@ -8,6 +8,6 @@ const num = ref(0);
 <template>
   <h1>Hello World !</h1>
   <h2>{{ num }}</h2>
-  <wdf></wdf>
+  <iii></iii>
 
 </template>
