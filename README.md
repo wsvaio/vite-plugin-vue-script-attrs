@@ -14,7 +14,12 @@ import scriptAttrs from "vite-plugin-vue-script-attrs";
 ...
   plugins: [
     vue(),
-    scriptAttrs({ attrNames: ["name", "inheritAttrs", "a"] }) // attrNames default = ["name"]
+    scriptAttrs({
+      // 指定要移动的属性名
+      attrNames: ["name", "inheritAttrs", "a"], // default = ["name"]
+      // 当组件的文件名为index.vue时，自动读取父文件夹的名称作为组件名，优先级低
+      autoName: true // default = false
+    }) 
   ],
 ...
 ```

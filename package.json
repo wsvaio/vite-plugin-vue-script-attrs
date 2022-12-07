@@ -14,7 +14,8 @@
     "plugin",
     "vue",
     "script",
-    "attrs"
+    "attrs",
+    "setup name"
   ],
   "exports": {
     ".": {
