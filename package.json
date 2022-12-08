@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-vue-script-attrs",
-  "version": "0.1.0-0",
+  "version": "0.1.0-1",
   "description": "移动setup script标签上的属性到一个新的script标签内导出",
   "author": "wsvaio <wsvaio@qq.com>",
   "license": "MIT",
