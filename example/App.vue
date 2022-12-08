@@ -1,4 +1,13 @@
-<script setup lang="ts" name="home" inheritAttrs="true" a="a" b="b" c="c" tag="div" :class="['admin', layout, collapse && 'collapse']" :style="{ '--aside-width': asideWidth }">
+<script setup lang="ts" :name="'1'"
+inheritAttrs a="a" b="b" c="c" tag="div"
+:class="['admin', layout, collapse && 'collapse']"
+:style="{ '--aside-width': asideWidth }"
+@click="(ev) => {
+  ev.preventDefault();
+}"
+hide
+:ishide="false"
+>
 import { ref } from 'vue';
 import iii from "./index.vue";
 

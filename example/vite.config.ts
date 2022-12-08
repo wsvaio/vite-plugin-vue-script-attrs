@@ -6,6 +6,6 @@ import scriptAttrs from "../src"
 export default defineConfig({
   plugins: [
     vue(),
-    scriptAttrs({ attrNames: ["name", "inheritAttrs", "a"], autoName: true })
+    scriptAttrs({ attrNames: ["name", "inheritAttrs", "a", "class", "style"], autoName: true })
   ],
 });
