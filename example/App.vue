@@ -1,13 +1,4 @@
-<script setup lang="ts" :name="'1'"
-inheritAttrs a="a" b="b" c="c" tag="div"
-:class="['admin', layout, collapse && 'collapse']"
-:style="{ '--aside-width': asideWidth }"
-@click="(ev) => {
-  ev.preventDefault();
-}"
-hide
-:ishide="false"
->
+<script setup lang="ts" name="App">
 import { ref } from 'vue';
 import iii from "./index.vue";
 

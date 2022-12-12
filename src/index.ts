@@ -1,7 +1,7 @@
 import { PluginOption } from "vite";
 
 const generate = (exportRaw: string, code: string, lang?: string) => `
-<script${lang ? ` lang=${lang}` : ""}>export default { ${exportRaw} }</script><!-- generate by vite-plugin-vue-script-attrs -->
+<script${lang ? ` lang=${lang}` : ""}>export default { ${exportRaw} }</script>
 ${code}
 `;
 
@@ -30,7 +30,6 @@ const getAttrVal = (map: Map<string, string | boolean>, key: string) => {
   if (val) return val;
   val = map.get(":" + key);
   if (typeof val != "string") return val;
-  console.log(val);
   return JSON.parse(val);
 }
 
@@ -54,7 +53,8 @@ export default ({ attrNames = ["name"], autoName = false } = {}): PluginOption =
     const attrMap = attrRawToMap(matched);
 
     if (autoName && !attrMap.has("name") && id.toLowerCase().endsWith("index.vue")) {
-      attrMap.set("name", id.split(/[\\/]/).reverse()[1]);
+      const name = id.split(/[\\/]/).reverse()[1];
+      attrMap.set("name", `"${name}"`);
       attrNames.includes("name") || attrNames.push("name");
     }
 
